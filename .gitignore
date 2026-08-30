@@ -9,17 +9,26 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 /[Mm]emoryCaptures/
+/[Rr]ecordings/
 
-# Asset Store Pakete (sollten aus dem Store neu geladen werden)
+# =========================================================================
+# Asset Store Pakete & Autogeneriertes
+# =========================================================================
 /[Aa]ssets/AssetStoreTools*
-
-# Autogenerierte Visual Studio / IDE Dateien
 /[Aa]ssets/Plugins/Editor/JetBrains*
 
 # =========================================================================
-# Visual Studio / Visual Studio Code / Rider
+# Addressables / Asset Pipeline Artifacts
+# =========================================================================
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+/[Aa]ssets/StreamingAssets/aa.meta
+/[Aa]ssets/StreamingAssets/aa/*
+
+# =========================================================================
+# Visual Studio / Visual Studio Code / Rider / IDEs
 # =========================================================================
 .vs/
+.vscode/
 .idea/
 *.csproj
 *.unityproj
@@ -31,6 +40,7 @@
 *.booproj
 *.svd
 *.pdb
+*.mdb
 *.opendb
 *.VC.db
 
@@ -50,3 +60,18 @@ Thumbs.db
 *.aab
 *.unitypackage
 *.app
+
+# =========================================================================
+# Test / Coverage
+# =========================================================================
+TestResults/
+coverage/
+
+# =========================================================================
+# Secrets / Local Env (Niemals hochladen!)
+# =========================================================================
+.env
+.env.*
+*.pem
+*.p12
+*.key
