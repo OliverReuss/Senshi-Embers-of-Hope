@@ -13,11 +13,9 @@
 *.ogg filter=lfs diff=lfs merge=lfs -text
 *.tga filter=lfs diff=lfs merge=lfs -text
 *.unitypackage filter=lfs diff=lfs merge=lfs -text
-
 # Treat Unity scenes/prefabs as binary for merging
 *.unity merge=binary
 *.prefab merge=binary
-
 # Ensure YAML files use LF
 *.yml text eol=lf
 *.yaml text eol=lf
