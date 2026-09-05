@@ -73,7 +73,7 @@ coverage/
 
 # Git LFS metadata - keep pointer files in repo (actual binary tracked via LFS)
 *.psd
-*.png
+!*.png
 *.jpg
 *.jpeg
 *.tga
