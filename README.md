@@ -2,7 +2,7 @@
 
  ![Unity 2022.3.11f1](https://img.shields.io/badge/unity-2022.3.11f1-blue)
  ![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)
- [![Play on itch.io](https://img.shields.io/badge/Play%20on-itch.io-red)](https://itch.io/)
+ [![Play on itch.io](https://img.shields.io/badge/Play%20on-itch.io-red)](https://deltaforcer1.itch.io/senshi-embers-of-hope)
 
 Senshi: Embers of Hope is a low-poly action-adventure with melee combat, NPC dialogue, and short exploratory chapters. Navigate biomes, face enemies with combo attacks, and progress through story beats with simple crafting elements.
 

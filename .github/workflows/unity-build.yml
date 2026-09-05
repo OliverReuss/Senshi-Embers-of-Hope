@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: 'true'
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -14,6 +17,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
+
+      - name: Validate Unity activation secrets
+        run: |
+          if [ -z "${{ secrets.UNITY_LICENSE }}" ] && ( [ -z "${{ secrets.UNITY_SERIAL }}" ] || [ -z "${{ secrets.UNITY_EMAIL }}" ] || [ -z "${{ secrets.UNITY_PASSWORD }}" ] ); then
+            echo "ERROR: No Unity activation provided. Set UNITY_LICENSE (preferred) OR UNITY_SERIAL + UNITY_EMAIL + UNITY_PASSWORD as Secrets."
+            exit 1
+          fi
 
       - name: Cache Unity Library
         uses: actions/cache@v4
