@@ -10,74 +10,53 @@ Senshi: Embers of Hope is a low-poly action-adventure with melee combat, NPC dia
 
 ## Key Gameplay Concept
 
-Unlike classic top-down adventures, Senshi mixes third-person camera-relative movement with physics-based jumping and mouse-driven melee combos that allow single/double/triple strike chains depending on click timing.
+Unlike classic top-down adventures, Senshi mixes third-person camera-relative movement with physics-based jumping and mouse-driven melee.
 
 ## Features
 
 * Third-person movement oriented to camera with smooth turning
-* Melee combo system (single/double/triple click) and hit detection via raycasts
+* Melee combo system and hit detection via raycasts
 * Rigidbody-based jumping and physics interactions
 * Dialogue/Conversation system using Dialogue Editor
-* Pause menu, scene management, and basic crafting hooks
+* Pause menu and scene management
 
 ## Play Online / Builds
 
-* **Browser (WebGL):** Play on itch.io (placeholder link)
+* **Browser (WebGL):** Play on itch.io
 * **PC Standalone:** Use GitHub Releases for executable downloads
-
-## Prerequisites (Editor Setup)
-
-* **Unity:** 2022.3.11f1 (LTS)
-* **Packages:** Universal RP, TextMeshPro, Input System, Cinemachine, Timeline
-
-## Quickstart (Editor)
-
-1. Install Unity Hub and add `2022.3.11f1`.
-2. Clone the repo and open the folder in Unity Hub:
-
-```bash
-git clone https://github.com/<your-username>/<repo>.git
-cd <repo>
-```
-
-1. (Optional) Install and pull Git LFS assets:
-
-```bash
-git lfs install
-git lfs pull
-```
-
-1. Open the project in Unity Hub, let packages resolve, and open your main Scene (e.g., `Scenes/Main.unity`).
-
-## Local Build (PC Standalone)
-
-1. File → Build Settings → Add the main scenes to *Scenes in Build*.
-2. Platform → *PC, Mac & Linux Standalone* → Build.
 
 ## Controls
 
 | Action | Input |
 | :--- | :--- |
-| **Move** | `W`, `A`, `S`, `D` or Joystick Left Stick |
+| **Move** | `W`, `A`, `S`, `D` |
 | **Aim / Cursor** | Mouse |
-| **Attack** | Left Mouse Button (single/double/triple click combos) |
-| **Jump** | `Space` (mapped to `Jump` input) |
-| **Interact / Talk** | `F` |
+| **Attack** | Left Mouse Button |
+| **Jump** | `Space` |
 | **Pause** | `Esc` |
-
-## Architecture (Overview)
-
-* `PlayerController` — movement, `OnMove` (Input System) and legacy fallbacks
-* `Schlagen` — melee attack / combo logic and raycast hit detection
-* `ConversationStarter` — triggers dialogue on player proximity and `F` input
-* `PauseMenu` — pause/resume UI and scene control
 
 ## Screenshots
 
-Place screenshots and GIFs under `docs/` and reference them here. Example:
-
 <div align="center">
-  <img src="docs/screenshot-1.png" width="600" alt="Gameplay">
+  <img src="docs/logo.png" width="600" alt="Gameplay">
+</div>
+#<div align="center">
+  <img src="docs/world_1.png" width="600" alt="Gameplay">
+</div>
+<div align="center">
+  <img src="docs/world_2.png" width="600" alt="Gameplay">
+</div>
+<div align="center">
+  <img src="docs/world_3.png" width="600" alt="Gameplay">
+</div>
+<div align="center">
+  <img src="docs/world_4.png" width="600" alt="Gameplay">
+</div>
+<div align="center">
+  <img src="docs/world_5.png" width="600" alt="Gameplay">
+</div>
+<div align="center">
+  <img src="docs/world_6.png" width="600" alt="Gameplay">
 </div>
 
 ## License
@@ -87,8 +66,5 @@ Place screenshots and GIFs under `docs/` and reference them here. Example:
 ## Contact / Credits
 
 * **Author:** Oliver Reuß
-* **Academic Context:** SWE&GD 23/24 — Gruppe C
-
----
-
-If you'd like, I can: commit these changes, consolidate the CI workflow, and remove the extra `deploy.yml` file so only `unity-build.yml` remains.
+* **Developers:** Oliver Reuß, Jakob Drescher, Max Lochner, Benedikt Kandler
+* **Academic Context:** Developed as a group project during the 2023/24 winter semester for the Software Engineering and Game Design course in the Media Informatics (B.Sc.) program at Hof University.

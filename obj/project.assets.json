@@ -2,33 +2,6 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "Boxophobic.SkyboxCubemapExtended.Editor/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "Boxophobic.Utils.Editor": "1.0.0",
-          "Boxophobic.Utils.Scripts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Boxophobic.SkyboxCubemapExtended.Editor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Boxophobic.SkyboxCubemapExtended.Editor.dll": {}
-        }
-      },
-      "Boxophobic.Utils.Editor/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "Boxophobic.Utils.Scripts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Boxophobic.Utils.Editor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Boxophobic.Utils.Editor.dll": {}
-        }
-      },
       "Boxophobic.Utils.Scripts/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -42,16 +15,6 @@
     }
   },
   "libraries": {
-    "Boxophobic.SkyboxCubemapExtended.Editor/1.0.0": {
-      "type": "project",
-      "path": "Boxophobic.SkyboxCubemapExtended.Editor.csproj",
-      "msbuildProject": "Boxophobic.SkyboxCubemapExtended.Editor.csproj"
-    },
-    "Boxophobic.Utils.Editor/1.0.0": {
-      "type": "project",
-      "path": "Boxophobic.Utils.Editor.csproj",
-      "msbuildProject": "Boxophobic.Utils.Editor.csproj"
-    },
     "Boxophobic.Utils.Scripts/1.0.0": {
       "type": "project",
       "path": "Boxophobic.Utils.Scripts.csproj",
@@ -60,8 +23,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "Boxophobic.SkyboxCubemapExtended.Editor >= 1.0.0",
-      "Boxophobic.Utils.Editor >= 1.0.0",
       "Boxophobic.Utils.Scripts >= 1.0.0"
     ]
   },
@@ -71,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/Assembly-CSharp.csproj",
-      "projectName": "Assembly-CSharp",
-      "projectPath": "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/Assembly-CSharp.csproj",
+      "projectUniqueName": "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/Boxophobic.Utils.Editor.csproj",
+      "projectName": "Boxophobic.Utils.Editor",
+      "projectPath": "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/Boxophobic.Utils.Editor.csproj",
       "packagesPath": "/home/oli/.nuget/packages/",
       "outputPath": "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/obj/",
       "projectStyle": "PackageReference",
@@ -90,12 +51,6 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/Boxophobic.SkyboxCubemapExtended.Editor.csproj": {
-              "projectPath": "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/Boxophobic.SkyboxCubemapExtended.Editor.csproj"
-            },
-            "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/Boxophobic.Utils.Editor.csproj": {
-              "projectPath": "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/Boxophobic.Utils.Editor.csproj"
-            },
             "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/Boxophobic.Utils.Scripts.csproj": {
               "projectPath": "/home/oli/Documents/Bildung und Studium/Bachelor/3. Semester/Software Engineering und Gamedesign/senshi-embers-of-hope/Boxophobic.Utils.Scripts.csproj"
             }
