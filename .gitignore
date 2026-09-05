@@ -1,32 +1,12 @@
-# =========================================================================
-# Unity-spezifische Ordner und Dateien
-# =========================================================================
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
-/[Mm]emoryCaptures/
-/[Rr]ecordings/
+## Unity Gitignore
+# Official Unity .gitignore adapted for common projects
 
-# =========================================================================
-# Asset Store Pakete & Autogeneriertes
-# =========================================================================
-/[Aa]ssets/AssetStoreTools*
-/[Aa]ssets/Plugins/Editor/JetBrains*
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# =========================================================================
-# Addressables / Asset Pipeline Artifacts
-# =========================================================================
-/[Aa]ssets/AddressableAssetsData/*/*.bin*
-/[Aa]ssets/StreamingAssets/aa.meta
-/[Aa]ssets/StreamingAssets/aa/*
-
-# =========================================================================
-# Visual Studio / Visual Studio Code / Rider / IDEs
-# =========================================================================
+# Visual Studio / Rider / VSCode
 .vs/
 .vscode/
 .idea/
@@ -44,34 +24,66 @@
 *.opendb
 *.VC.db
 
-# =========================================================================
-# OS-spezifische Dateien
-# =========================================================================
-.DS_Store
-.DS_Store?
-ehthumbs.db
-Thumbs.db
-[Dd]esktop.ini
+# Unity generated folders
+/Library/
+/Temp/
+/Obj/
+/Build/
+/Builds/
+/Logs/
+/UserSettings/
+/MemoryCaptures/
+/Recordings/
+/LocalCache/
 
-# =========================================================================
-# Builds & Executables
-# =========================================================================
+# Asset pipeline
+/Assets/AddressableAssetsData/*/*.bin*
+/Assets/StreamingAssets/aa.meta
+/Assets/StreamingAssets/aa/*
+
+# Asset Store tools
+/Assets/AssetStoreTools*
+
+# Packed samples and packages
+*.unitypackage
+
+# Builds
 *.apk
 *.aab
-*.unitypackage
+*.exe
 *.app
 
-# =========================================================================
-# Test / Coverage
-# =========================================================================
-TestResults/
+# Audio / video cache
+*.weba
+
+# Cache and logs
+*.log
+*.cache
+
+# Test results
+/TestResults/
 coverage/
 
-# =========================================================================
-# Secrets / Local Env (Niemals hochladen!)
-# =========================================================================
+# Secrets and keys
 .env
 .env.*
 *.pem
 *.p12
 *.key
+
+# Git LFS metadata - keep pointer files in repo (actual binary tracked via LFS)
+*.psd
+*.png
+*.jpg
+*.jpeg
+*.tga
+*.gif
+*.mp4
+*.mov
+*.mp3
+*.wav
+*.ogg
+*.fbx
+
+# Cleanup
+bfg.jar

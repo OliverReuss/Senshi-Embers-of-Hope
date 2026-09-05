@@ -1,0 +1,55 @@
+name: Unity WebGL Build + Itch.io Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Cache Unity Library
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-${{ runner.os }}-WebGL-${{ hashFiles('Assets/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-${{ runner.os }}-WebGL-
+
+      - name: Build Unity project for WebGL
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: WebGL
+          unityVersion: 2022.3.11f1
+          buildName: Senshi-Embers-of-Hope
+          versioning: Custom
+
+      - name: Install Butler
+        run: |
+          curl -L -o butler.tar.gz "https://broth.itch.ovh/client/linux-amd64/latest/archive.tar.gz"
+          mkdir butler && tar -xzf butler.tar.gz -C butler
+          sudo mv butler/butler /usr/local/bin/butler
+
+      - name: Upload WebGL build to itch.io
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          ITCHIO_USERNAME: ${{ secrets.ITCHIO_USERNAME }}
+          ITCHIO_GAME: ${{ secrets.ITCHIO_GAME }}
+        run: |
+          WEBGL_DIR="$(find build -maxdepth 4 -type d -iname '*WebGL*' | head -n 1)"
+          echo "Using WebGL dir: $WEBGL_DIR"
+          if [ -z "$WEBGL_DIR" ]; then
+            echo "WebGL build directory not found"
+            exit 1
+          fi
+          echo "${BUTLER_CREDENTIALS}" | butler login --username ${ITCHIO_USERNAME} --password-stdin || true
+          butler push "$WEBGL_DIR" "${ITCHIO_USERNAME}/${ITCHIO_GAME}:html"
