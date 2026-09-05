@@ -37,6 +37,8 @@ jobs:
         with:
           targetPlatform: WebGL
           buildName: Senshi-Embers-of-Hope
+          versioning: Custom
+          version: 1.0.0
 
       - name: Install Butler
         run: |
