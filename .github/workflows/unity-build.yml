@@ -43,11 +43,7 @@ jobs:
           version: 1.0.0
 
       - name: Install Butler
-        run: |
-          curl -L -o butler.tar.gz "https://broth.itch.ovh/client/linux-amd64/latest/archive.tar.gz"
-          mkdir butler && tar -xzf butler.tar.gz -C butler
-          sudo mv butler/butler /usr/local/bin/butler
-          butler -V
+        uses: manleyjster/setup-butler@v1
 
       - name: Upload WebGL build to itch.io
         env:
