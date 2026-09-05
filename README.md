@@ -63,7 +63,7 @@ Unlike classic top-down adventures, Senshi mixes third-person camera-relative mo
 
 [MIT](LICENSE)
 
-## Contact / Credits
+## Credits
 
 * **Author:** Oliver Reuß
 * **Developers:** Oliver Reuß, Jakob Drescher, Max Lochner, Benedikt Kandler
