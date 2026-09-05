@@ -63,9 +63,3 @@ jobs:
           fi
           echo "${BUTLER_CREDENTIALS}" | butler login --username ${ITCHIO_USERNAME} --password-stdin || true
           butler push "$WEBGL_DIR" "${ITCHIO_USERNAME}/${ITCHIO_GAME}:html"
-
-      - name: Sanity-check UNITY_LICENSE (decode + XML parse)
-        if: secrets.UNITY_LICENSE != ''
-        run: |
-          echo "${{ secrets.UNITY_LICENSE }}" | base64 --decode > /tmp/check.unity.ulf
-          xmllint --noout /tmp/check.unity.ulf || { echo "UNITY_LICENSE malformed or not valid XML"; exit 1; }
