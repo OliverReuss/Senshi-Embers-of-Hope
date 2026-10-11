@@ -25,9 +25,9 @@ desktop.ini
 *.VC.db
 
 # Unity generated folders
-/Library/
-/Temp/
-/Obj/
+/[O|o]bj/
+/[L|l]ibrary/
+/[T|t]emp/
 /Build/
 /Builds/
 /Logs/
